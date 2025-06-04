@@ -1,0 +1,108 @@
+name: 🔌 Plugin Installation Request
+description: Request the addition of a new plugin to Dify
+title: "[Plugin] "
+labels: [plugin-request]
+assignees: [coitate]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🔍 Plugin Overview
+
+  - type: input
+    id: plugin-name
+    attributes:
+      label: Plugin Name
+      placeholder: e.g. Realtime Weather Plugin
+    validations:
+      required: true
+
+  - type: textarea
+    id: plugin-description
+    attributes:
+      label: Plugin Description
+      placeholder: Describe what this plugin does
+    validations:
+      required: true
+
+  - type: input
+    id: plugin-type
+    attributes:
+      label: Plugin Type
+      placeholder: e.g. Data Source, Tool, UI Extension
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## 🧩 Purpose and Use Case  
+        Describe the problem you’re trying to solve or what functionality you expect from this plugin.
+
+  - type: textarea
+    id: purpose
+    attributes:
+      label: Purpose and Use Case
+      placeholder: |
+        e.g. "I need a plugin that integrates with XYZ API to fetch real-time data."
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## 📦 Plugin Source
+
+  - type: input
+    id: marketplace-url
+    attributes:
+      label: Marketplace URL
+      placeholder: e.g. https://dify.marketplace/plugin-name
+    validations:
+      required: false
+
+  - type: input
+    id: repository-url
+    attributes:
+      label: Repository URL
+      placeholder: e.g. https://github.com/user/plugin-repo
+    validations:
+      required: false
+
+  - type: input
+    id: package-url
+    attributes:
+      label: Plugin Package (.difypkg) URL
+      placeholder: e.g. https://example.com/plugin.difypkg
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ## 🛠️ Installation Method  
+        Select how you want the plugin to be installed.
+
+  - type: checkboxes
+    id: install-method
+    attributes:
+      label: Installation Method
+      options:
+        - label: Install from Dify Marketplace
+        - label: Install from external source (provide details in context below)
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## 📝 Additional Context  
+        Include any other relevant information.
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      placeholder: Include dependencies, permissions, screenshots, or anything else we should know
+    validations:
+      required: false
