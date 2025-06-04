@@ -1,0 +1,63 @@
+name: 📂 Google Drive Access Request
+description: Request access to a project-related Google Drive folder
+title: "[Drive Access] "
+labels: [gdrive-access]
+assignees: [coitate]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 📂 Google Drive Access Request  
+        Please fill in the form below to request access to the relevant Google Drive folder for your project.
+
+  - type: input
+    id: requestor-name
+    attributes:
+      label: Your Name
+      placeholder: e.g. Chihiro Tanaka
+    validations:
+      required: true
+
+  - type: input
+    id: email
+    attributes:
+      label: Google Account Email
+      placeholder: e.g. chihiro@example.com
+    validations:
+      required: true
+
+  - type: input
+    id: project-name
+    attributes:
+      label: Project Name
+      placeholder: e.g. AI Assistant v2 Launch
+    validations:
+      required: true
+
+  - type: textarea
+    id: purpose
+    attributes:
+      label: Purpose of Access
+      placeholder: e.g. Reviewing shared documentation, uploading deliverables, etc.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: access-level
+    attributes:
+      label: Requested Access Level
+      description: Select the access level you need
+      options:
+        - label: 🔍 View only
+        - label: ✏️ Edit
+        - label: 📁 Upload / Manage files
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context (optional)
+      placeholder: Any extra details, such as related team members, deadlines, or special permissions
+    validations:
+      required: false
