@@ -90,8 +90,6 @@ body:
       options:
         - label: Install from Dify Marketplace
         - label: Install from external source (provide details in context below)
-    validations:
-      required: true
 
   - type: markdown
     attributes:
