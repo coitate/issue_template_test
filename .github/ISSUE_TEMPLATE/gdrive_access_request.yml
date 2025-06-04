@@ -14,7 +14,7 @@ body:
     id: email
     attributes:
       label: Google Account Email
-      placeholder: e.g. chihiro@example.com
+      placeholder: e.g. your_name@sun-asterisk.com
     validations:
       required: true
 
