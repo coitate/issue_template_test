@@ -11,26 +11,10 @@ body:
         Please fill in the form below to request access to the relevant Google Drive folder for your project.
 
   - type: input
-    id: requestor-name
-    attributes:
-      label: Your Name
-      placeholder: e.g. Chihiro Tanaka
-    validations:
-      required: true
-
-  - type: input
     id: email
     attributes:
       label: Google Account Email
       placeholder: e.g. chihiro@example.com
-    validations:
-      required: true
-
-  - type: input
-    id: project-name
-    attributes:
-      label: Project Name
-      placeholder: e.g. AI Assistant v2 Launch
     validations:
       required: true
 
@@ -51,8 +35,6 @@ body:
         - label: 🔍 View only
         - label: ✏️ Edit
         - label: 📁 Upload / Manage files
-    validations:
-      required: true
 
   - type: textarea
     id: additional-context
