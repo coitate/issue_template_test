@@ -1,136 +1,64 @@
-name: 🐛 Bug Report
-description: Report a bug to help us improve the product
-title: "[Bug] "
-labels: [bug]
-assignees: [coitate]
-
+name: Bug Report
+description: File a bug report.
+title: "[Bug]: "
+labels: ["bug", "triage"]
+projects: ["octo-org/1", "octo-org/44"]
+assignees:
+  - octocat
 body:
-- type: markdown
+  - type: markdown
     attributes:
       value: |
-        ## 🐞 Describe the Bug  
-        Please provide a clear and concise description of the issue.
-
-- type: textarea
-    id: bug-description
+        Thanks for taking the time to fill out this bug report!
+  - type: input
+    id: contact
     attributes:
-      label: Bug Description
-      placeholder: Describe what the bug is
-    validations:
-      required: true
-
-- type: markdown
-    attributes:
-      value: |
-        ## 🔁 Steps to Reproduce  
-        List the steps to reproduce the behavior.
-
-- type: textarea
-    id: steps-to-reproduce
-    attributes:
-      label: Steps to Reproduce
-      placeholder: |
-        1. Go to '...'
-        2. Click on '...'
-        3. Scroll to '...'
-        4. Observe the error
-    validations:
-      required: true
-
-- type: markdown
-    attributes:
-      value: |
-        ## ✅ Expected Behavior  
-        What did you expect to happen instead?
-
-- type: textarea
-    id: expected-behavior
-    attributes:
-      label: Expected Behavior
-      placeholder: What should have happened?
-    validations:
-      required: true
-
-- type: markdown
-    attributes:
-      value: |
-        ## 📸 Screenshots  
-        If applicable, please add screenshots or screen recordings to help explain the issue.
-
-- type: textarea
-    id: screenshots
-    attributes:
-      label: Screenshots
-      placeholder: Paste links or drag & drop images/videos here
+      label: Contact Details
+      description: How can we get in touch with you if we need more info?
+      placeholder: ex. email@example.com
     validations:
       required: false
-
-- type: markdown
+  - type: textarea
+    id: what-happened
     attributes:
-      value: |
-        ## 🖥️ Environment Information  
-        Please fill in the following information.
-
-- type: input
-
--
-    id: operating-system
-    attributes:
-      label: Operating System
-      placeholder: e.g. macOS, Windows, Ubuntu
+      label: What happened?
+      description: Also tell us, what did you expect to happen?
+      placeholder: Tell us what you see!
+      value: "A bug happened!"
     validations:
       required: true
-
-- type: input
-    id: os-version
+  - type: dropdown
+    id: version
     attributes:
-      label: OS Version
-      placeholder: e.g. 14.3.1
+      label: Version
+      description: What version of our software are you running?
+      options:
+        - 1.0.2 (Default)
+        - 1.0.3 (Edge)
+      default: 0
     validations:
       required: true
-
-- type: input
-    id: browser
+  - type: dropdown
+    id: browsers
     attributes:
-      label: Browser
-      placeholder: e.g. Chrome, Firefox, Safari
-    validations:
-      required: true
-
-- type: input
-    id: browser-version
+      label: What browsers are you seeing the problem on?
+      multiple: true
+      options:
+        - Firefox
+        - Chrome
+        - Safari
+        - Microsoft Edge
+  - type: textarea
+    id: logs
     attributes:
-      label: Browser Version
-      placeholder: e.g. 125.0.6422.113
-    validations:
-      required: true
-
-- type: input
-    id: dify-version
+      label: Relevant log output
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: shell
+  - type: checkboxes
+    id: terms
     attributes:
-      label: Dify Version
-      placeholder: e.g. v0.7.1
-    validations:
-      required: false
-
-- type: input
-    id: plugin-version
-    attributes:
-      label: Plugin Version (if any)
-      placeholder: e.g. ChatGPT Plugin v2.3.0
-    validations:
-      required: false
-
-- type: markdown
-    attributes:
-      value: |
-        ## 📝 Additional Context  
-        Add any other relevant information, logs, or context about the problem here.
-
-- type: textarea
-    id: additional-context
-    attributes:
-      label: Additional Context
-      placeholder: Any other helpful information?
-    validations:
-      required: false
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com). 
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
