@@ -1,7 +1,7 @@
 name: 🐛 Bug Report
 description: Report a bug to help us improve the product
 title: "[Bug] "
-labels: [bug]
+labels: [bug, enhancement]
 assignees: [coitate]
 body:
   - type: markdown
