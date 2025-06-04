@@ -1,0 +1,136 @@
+name: 🐛 Bug Report
+description: Report a bug to help us improve the product
+title: "[Bug] "
+labels: [bug]
+assignees: [coitate]
+
+body:
+- type: markdown
+    attributes:
+      value: |
+        ## 🐞 Describe the Bug  
+        Please provide a clear and concise description of the issue.
+
+- type: textarea
+    id: bug-description
+    attributes:
+      label: Bug Description
+      placeholder: Describe what the bug is
+    validations:
+      required: true
+
+- type: markdown
+    attributes:
+      value: |
+        ## 🔁 Steps to Reproduce  
+        List the steps to reproduce the behavior.
+
+- type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to Reproduce
+      placeholder: |
+        1. Go to '...'
+        2. Click on '...'
+        3. Scroll to '...'
+        4. Observe the error
+    validations:
+      required: true
+
+- type: markdown
+    attributes:
+      value: |
+        ## ✅ Expected Behavior  
+        What did you expect to happen instead?
+
+- type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      placeholder: What should have happened?
+    validations:
+      required: true
+
+- type: markdown
+    attributes:
+      value: |
+        ## 📸 Screenshots  
+        If applicable, please add screenshots or screen recordings to help explain the issue.
+
+- type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      placeholder: Paste links or drag & drop images/videos here
+    validations:
+      required: false
+
+- type: markdown
+    attributes:
+      value: |
+        ## 🖥️ Environment Information  
+        Please fill in the following information.
+
+- type: input
+
+-
+    id: operating-system
+    attributes:
+      label: Operating System
+      placeholder: e.g. macOS, Windows, Ubuntu
+    validations:
+      required: true
+
+- type: input
+    id: os-version
+    attributes:
+      label: OS Version
+      placeholder: e.g. 14.3.1
+    validations:
+      required: true
+
+- type: input
+    id: browser
+    attributes:
+      label: Browser
+      placeholder: e.g. Chrome, Firefox, Safari
+    validations:
+      required: true
+
+- type: input
+    id: browser-version
+    attributes:
+      label: Browser Version
+      placeholder: e.g. 125.0.6422.113
+    validations:
+      required: true
+
+- type: input
+    id: dify-version
+    attributes:
+      label: Dify Version
+      placeholder: e.g. v0.7.1
+    validations:
+      required: false
+
+- type: input
+    id: plugin-version
+    attributes:
+      label: Plugin Version (if any)
+      placeholder: e.g. ChatGPT Plugin v2.3.0
+    validations:
+      required: false
+
+- type: markdown
+    attributes:
+      value: |
+        ## 📝 Additional Context  
+        Add any other relevant information, logs, or context about the problem here.
+
+- type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      placeholder: Any other helpful information?
+    validations:
+      required: false
