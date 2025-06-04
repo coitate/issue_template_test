@@ -4,59 +4,130 @@ title: "[Bug] "
 labels: [bug]
 assignees: [coitate]
 body:
-  - type: checkboxes
+  - type: markdown
     attributes:
-      label: Self Checks
-      description: "To make sure we get to you in time, please check the following :)"
-      options:
-        - label: This is only for bug report, if you would like to ask a question, please head to [Discussions](https://github.com/langgenius/dify/discussions/categories/general).
-          required: true
-        - label: I have searched for existing issues [search for existing issues](https://github.com/langgenius/dify/issues), including closed ones.
-          required: true
-        - label: I confirm that I am using English to submit this report (我已阅读并同意 [Language Policy](https://github.com/langgenius/dify/issues/1542)).
-          required: true
-        - label: "[FOR CHINESE USERS] 请务必使用英文提交 Issue，否则会被关闭。谢谢！:)"
-          required: true
-        - label: "Please do not modify this template :) and fill in all the required fields."
-          required: true
-
-  - type: input
-    attributes:
-      label: Dify version
-      description: See about section in Dify console
-    validations:
-      required: true
-
-  - type: dropdown
-    attributes:
-      label: Cloud or Self Hosted
-      description: How / Where was Dify installed from?
-      multiple: true
-      options:
-        - Cloud
-        - Self Hosted (Docker)
-        - Self Hosted (Source)
-    validations:
-      required: true
+      value: |
+        ## 🐞 Describe the Bug  
+        Please provide a clear and concise description of the issue.
 
   - type: textarea
+    id: bug-description
     attributes:
-      label: Steps to reproduce
-      description: We highly suggest including screenshots and a bug report log. Please use the right markdown syntax for code blocks.
-      placeholder: Having detailed steps helps us reproduce the bug.
+      label: Bug Description
+      placeholder: Describe what the bug is
     validations:
       required: true
 
-  - type: textarea
+  - type: markdown
     attributes:
-      label: ✔️ Expected Behavior
-      placeholder: What were you expecting?
+      value: |
+        ## 🔁 Steps to Reproduce  
+        List the steps to reproduce the behavior.
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to Reproduce
+      placeholder: |
+        1. Go to '...'
+        2. Click on '...'
+        3. Scroll to '...'
+        4. Observe the error
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## ✅ Expected Behavior  
+        What did you expect to happen instead?
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      placeholder: What should have happened?
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## 📸 Screenshots  
+        If applicable, please add screenshots or screen recordings to help explain the issue.
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      placeholder: Paste links or drag & drop images/videos here
     validations:
       required: false
 
-  - type: textarea
+  - type: markdown
     attributes:
-      label: ❌ Actual Behavior
-      placeholder: What happened instead?
+      value: |
+        ## 🖥️ Environment Information  
+        Please fill in the following information.
+
+  - type: input
+    id: operating-system
+    attributes:
+      label: Operating System
+      placeholder: e.g. macOS, Windows, Ubuntu
+    validations:
+      required: true
+
+  - type: input
+    id: os-version
+    attributes:
+      label: OS Version
+      placeholder: e.g. 14.3.1
+    validations:
+      required: true
+
+  - type: input
+    id: browser
+    attributes:
+      label: Browser
+      placeholder: e.g. Chrome, Firefox, Safari
+    validations:
+      required: true
+
+  - type: input
+    id: browser-version
+    attributes:
+      label: Browser Version
+      placeholder: e.g. 125.0.6422.113
+    validations:
+      required: true
+
+  - type: input
+    id: dify-version
+    attributes:
+      label: Dify Version
+      placeholder: e.g. v0.7.1
+    validations:
+      required: false
+
+  - type: input
+    id: plugin-version
+    attributes:
+      label: Plugin Version (if any)
+      placeholder: e.g. ChatGPT Plugin v2.3.0
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ## 📝 Additional Context  
+        Add any other relevant information, logs, or context about the problem here.
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      placeholder: Any other helpful information?
     validations:
       required: false
