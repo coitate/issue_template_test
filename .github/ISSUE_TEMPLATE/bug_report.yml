@@ -17,7 +17,7 @@ body:
   - type: textarea
     id: list-steps
     attributes:
-      label: List the steps to reproduce the behavior:
+      label: "List the steps to reproduce the behavior:"
       description: Also tell us, what did you expect to happen?
       placeholder: Tell us what you see!
       value: "1. Go to '...',\n2. Click on '...'\n3. Scroll to '...'\n4. Observe the error"
