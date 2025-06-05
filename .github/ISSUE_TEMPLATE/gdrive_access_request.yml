@@ -11,10 +11,10 @@ body:
         Please fill in the form below to request access to the relevant Google Drive folder for your project.
 
   - type: textarea
-    id: email
+    id: emails
     attributes:
-      label: Google Account Email
-      placeholder: e.g.\nuser1@sun-asterisk.com\nuser2@sun-asterisk.com
+      label: Google Account Emails
+      placeholder: e.g. your_name@sun-asterisk.com
     validations:
       required: true
 
