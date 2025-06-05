@@ -10,11 +10,11 @@ body:
         ## 📂 Google Drive Access Request
         Please fill in the form below to request access to the relevant Google Drive folder for your project.
 
-  - type: textarea
-    id: emails
+  - type: input
+    id: email
     attributes:
-      label: Google Account Emails
-      placeholder: e.g. user1@sun-asterisk.com, user2@sun-asterisk.com
+      label: Google Account Email
+      placeholder: e.g. your_name@sun-asterisk.com
     validations:
       required: true
 
