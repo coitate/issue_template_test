@@ -1,20 +1,23 @@
 name: 📂 Google Drive Access Request
 description: Request access to a project-related Google Drive folder
 title: "[Drive Access] "
-labels: [gdrive-access]
+labels: [gdrive access]
 assignees: [coitate]
 body:
   - type: markdown
     attributes:
       value: |
-        ## 📂 Google Drive Access Request  
+        ## 📂 Google Drive Access Request
         Please fill in the form below to request access to the relevant Google Drive folder for your project.
 
-  - type: input
+  - type: textarea
     id: email
     attributes:
       label: Google Account Email
-      placeholder: e.g. your_name@sun-asterisk.com
+      placeholder:
+        - e.g.
+        - user1@sun-asterisk.com
+        - user2@sun-asterisk.com
     validations:
       required: true
 
