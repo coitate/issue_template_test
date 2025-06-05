@@ -92,7 +92,7 @@ body:
       label: Plugin Version (if any)
       placeholder: e.g. ChatGPT Plugin v2.3.0
     validations:
-      required: true
+      required: false
 
   - type: input
     id: os-version
