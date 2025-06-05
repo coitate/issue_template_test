@@ -84,7 +84,7 @@ body:
       label: Dify Version
       placeholder: e.g. v0.7.1
     validations:
-      required: false
+      required: true
 
   - type: input
     id: plugin-version
@@ -92,25 +92,31 @@ body:
       label: Plugin Version (if any)
       placeholder: e.g. ChatGPT Plugin v2.3.0
     validations:
-      required: false
+      required: true
 
   - type: input
     id: os-version
     attributes:
       label: OS Version
       placeholder: e.g. 14.3.1
+    validations:
+      required: false
 
   - type: input
     id: browser
     attributes:
       label: Browser
       placeholder: e.g. Chrome, Firefox, Safari
+    validations:
+      required: false
 
   - type: input
     id: browser-version
     attributes:
       label: Browser Version
       placeholder: e.g. 125.0.6422.113
+    validations:
+      required: false
 
   - type: markdown
     attributes:
